@@ -3,12 +3,12 @@ from datetime import datetime
 
 from main import db
 
+
 class CreatedModifiedMixin:
     created = db.Column(db.DateTime(), nullable=False, default=datetime.utcnow)
     modified = db.Column(
         db.DateTime(), nullable=True, default=datetime.utcnow, onupdate=datetime.utcnow
     )
-
 
 
 class FilteredSchema:

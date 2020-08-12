@@ -1,12 +1,11 @@
 from marshmallow import ValidationError
 from flask_restful import Resource
-from flask import (
-    request
-)
+from flask import request
 
 from src.schemas.product import ProductSchema
 from main import db
 from src.models.product import Product
+
 
 class ProductCreateView(Resource):
     def post(self):
@@ -20,6 +19,7 @@ class ProductCreateView(Resource):
             return err.messages, 400
 
         return 200
+
 
 class ProductEntityView(Resource):
     def get(self, id):
