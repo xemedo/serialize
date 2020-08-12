@@ -10,5 +10,3 @@ class Config(object):
     TESTING = True
     ENV = "development"
     SERVER_NAME = "127.0.0.1:5000"
-    AUTH_TOKEN = "1234"
-    WTF_CSRF_ENABLED = True
