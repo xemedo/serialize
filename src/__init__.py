@@ -24,7 +24,7 @@ def create_app(testing=False):
     return app
 
 def configure_app(app, testing):
-    if testing is None:
+    if not testing:
         from src.config import Config
         app.config.from_object(Config)
 
