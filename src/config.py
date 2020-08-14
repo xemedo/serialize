@@ -5,7 +5,7 @@ class Config(object):
     basedir = os.path.abspath(os.path.dirname(__file__))
     SECRET_KEY = "dev-key"
     SECURITY_PASSWORD_SALT = "security-password-salt"
-    SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(basedir, "app.db")
+    SQLALCHEMY_DATABASE_URI = "sqlite:///app.db"
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     TESTING = True
     ENV = "development"

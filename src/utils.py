@@ -1,7 +1,7 @@
 from marshmallow_sqlalchemy import auto_field
 from datetime import datetime
 
-from main import db
+from . import db
 
 
 class CreatedModifiedMixin:

@@ -3,7 +3,7 @@ from flask_restful import Resource
 from flask import request
 
 from src.schemas.product import ProductSchema
-from main import db
+from .. import db
 from src.models.product import Product
 
 

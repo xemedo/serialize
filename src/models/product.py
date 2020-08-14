@@ -1,7 +1,7 @@
 from sqlalchemy_utils import UUIDType
 import uuid
 from src.utils import CreatedModifiedMixin
-from main import db
+from .. import db
 
 
 class Company(db.Model, CreatedModifiedMixin):
