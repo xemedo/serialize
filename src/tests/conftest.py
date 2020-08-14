@@ -1,11 +1,11 @@
 import pytest
-from main import create_app, db
+from src import create_app, db
 from src.models.product import Company
 
 
 @pytest.fixture
 def app():
-    app = create_app()
+    app = create_app(testing=True)
     with app.app_context():
         db.create_all()
     return app
@@ -28,7 +28,7 @@ def company(client):
 @pytest.fixture
 def product(client, company):
     return client.post(
-        "/api/v1/products/",
+        "products/",
         json={
             "name": "Computer",
             "description": "A highend computer",

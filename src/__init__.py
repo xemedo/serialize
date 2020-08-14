@@ -7,11 +7,11 @@ app = Flask(__name__)
 db = SQLAlchemy()
 migrate = Migrate()
 
-def create_app():
+def create_app(testing=False):
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
 
-    configure_app(app)
+    configure_app(app, testing)
 
     db.init_app(app)
     migrate.init_app(app, db)
@@ -23,7 +23,8 @@ def create_app():
 
     return app
 
-def configure_app(app):
-    from src.config import Config
-    app.config.from_object(Config)
+def configure_app(app, testing):
+    if testing is None:
+        from src.config import Config
+        app.config.from_object(Config)
 
