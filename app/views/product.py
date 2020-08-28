@@ -4,7 +4,7 @@ from flask import request
 
 from app.schemas.product import ProductSchema
 from .. import db
-from app.models.product import Product
+from app.models import Product
 
 
 class ProductCreateView(Resource):

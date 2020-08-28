@@ -1,6 +1,6 @@
 import pytest
 from app import create_app, db
-from app.models.product import Company
+from app.models import Company
 
 
 @pytest.fixture
@@ -19,7 +19,7 @@ def client(app):
 @pytest.fixture
 def company(client):
     with client.application.app_context():
-        company = Company(company_name="A Company")
+        company = Company(company_name="Hot AG")
         db.session.add(company)
         db.session.commit()
         return company.id
@@ -28,7 +28,7 @@ def company(client):
 @pytest.fixture
 def product(client, company):
     return client.post(
-        "products/",
+        "/products",
         json={
             "name": "Computer",
             "description": "A highend computer",

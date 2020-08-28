@@ -1,5 +1,5 @@
 from marshmallow_sqlalchemy import SQLAlchemyAutoSchema, auto_field
-from app.models.product import Product
+from app.models import Product
 from app.utils import FilteredSchema
 
 
