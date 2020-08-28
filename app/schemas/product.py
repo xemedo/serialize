@@ -1,6 +1,6 @@
 from marshmallow_sqlalchemy import SQLAlchemyAutoSchema, auto_field
-from src.models.product import Product
-from src.utils import FilteredSchema
+from app.models.product import Product
+from app.utils import FilteredSchema
 
 
 class ProductSchema(SQLAlchemyAutoSchema, FilteredSchema):

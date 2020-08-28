@@ -1,6 +1,6 @@
 import pytest
-from src import create_app, db
-from src.models.product import Company
+from app import create_app, db
+from app.models.product import Company
 
 
 @pytest.fixture

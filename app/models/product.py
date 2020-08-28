@@ -1,6 +1,6 @@
 from sqlalchemy_utils import UUIDType
 import uuid
-from src.utils import CreatedModifiedMixin
+from app.utils import CreatedModifiedMixin
 from .. import db
 
 

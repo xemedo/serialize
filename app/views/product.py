@@ -2,9 +2,9 @@ from marshmallow import ValidationError
 from flask_restful import Resource
 from flask import request
 
-from src.schemas.product import ProductSchema
+from app.schemas.product import ProductSchema
 from .. import db
-from src.models.product import Product
+from app.models.product import Product
 
 
 class ProductCreateView(Resource):

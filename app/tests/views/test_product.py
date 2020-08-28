@@ -1,5 +1,5 @@
-from src import db
-from src.models.product import Product
+from app import db
+from app.models.product import Product
 
 
 def test_create_product(app, client, company, product):

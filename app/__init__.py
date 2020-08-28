@@ -16,7 +16,7 @@ def create_app(testing=False):
     db.init_app(app)
     migrate.init_app(app, db)
 
-    from src.views.product import ProductCreateView, ProductEntityView
+    from app.views.product import ProductCreateView, ProductEntityView
     api = Api(app)
     api.add_resource(ProductCreateView, "/products/")
     api.add_resource(ProductEntityView, "/products/<id>/")
@@ -25,6 +25,6 @@ def create_app(testing=False):
 
 def configure_app(app, testing):
     if not testing:
-        from src.config import Config
+        from app.config import Config
         app.config.from_object(Config)
 
